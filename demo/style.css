@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+    font-family: "Poppins", "Noto Sans JP", sans-serif;
+}
+
+body {
+    background: rgb(50, 50, 50);
+}
+
+div.container {
+    position: absolute;
+    inset: 0;
+    margin: 6rem auto;
+    width: min(960px, 90%);
+    margin-inline: auto;
+    background: rgb(93, 93, 93);
+    padding: 3rem;
+    contain: paint;
+    border-radius: 8px;
+}
+
+p {
+    color: indigo;
+    font-weight: bold;
+}
+
+a {
+    color: coral;
+}
+
+a:hover {
+    color: indigo;
+}
