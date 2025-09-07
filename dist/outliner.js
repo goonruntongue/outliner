@@ -1,5 +1,5 @@
 /*!
- * jQuery outliner Plugin v1.2.0
+ * jQuery outliner Plugin v1.0.0
  * Make outlined text by cloning only text nodes (preserving existing HTML).
  *
  * MIT License
