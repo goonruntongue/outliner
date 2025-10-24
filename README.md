@@ -19,7 +19,6 @@
 もしくはCDNから
 ```html
 <script src="https://cdn.jsdelivr.net/gh/goonruntongue/outliner@1.1.0/dist/outliner.js"></script>
-<body>
 ```
 
 <br>
