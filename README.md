@@ -15,6 +15,14 @@
 <script src="path/to/outliner.min.js"></script>
 <body>
 ```
+
+もしくはcdnから
+```html
+<script src="path/to/jquery"></script>
+<script src="https://cdn.jsdelivr.net/gh/goonruntongue/outliner@1.1.0/dist/outliner.js"></script>
+<body>
+```
+
 <br>
 2.以下のようにoutlinerを実行
 
