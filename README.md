@@ -16,7 +16,7 @@
 <body>
 ```
 
-もしくはcdnから
+もしくはCDNから
 ```html
 <script src="path/to/jquery"></script>
 <script src="https://cdn.jsdelivr.net/gh/goonruntongue/outliner@1.1.0/dist/outliner.js"></script>
