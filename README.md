@@ -16,10 +16,20 @@
 <body>
 ```
 
-もしくはCDNから
-```html
-<script src="https://cdn.jsdelivr.net/gh/goonruntongue/outliner@1.1.0/dist/outliner.js"></script>
+または npm でインストールします。
+
+```bash
+npm install @goonruntongue/outliner jquery
 ```
+
+CDN から利用する場合は、jQuery の後に読み込みます。
+
+```html
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@goonruntongue/outliner@1.1.0/dist/outliner.min.js"></script>
+```
+
+UNPKG: <code>https://unpkg.com/@goonruntongue/outliner@1.1.0/dist/outliner.min.js</code>
 
 <br>
 2.以下のようにoutlinerを実行
