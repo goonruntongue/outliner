@@ -1,6 +1,6 @@
 /*!
- * jQuery outliner Plugin v1.0.0
- * Make outlined text by cloning only text nodes (preserving existing HTML).
+ * jQuery outliner2 Plugin v1.0.0
+ * Make outlined text by cloning only text nodes, with optional rounded corners.
  *
  * MIT License
  * Copyright (c) 2025 YOUR_NAME
@@ -31,14 +31,41 @@
   var defaults = {
     width: "4px", // outline width (e.g., "4px", "0.1em")
     color: "#000000", // outline color
+    corner: "0px", // positive value switches to a rounded outline renderer
   };
+
+  function pixelValue(value) {
+    var parsed = parseFloat(value);
+    return isFinite(parsed) && parsed > 0 ? parsed : 0;
+  }
+
+  /**
+   * 文字の周囲に小さな text-shadow を円形に並べる。
+   * text-stroke に linejoin はないため、この方式で角丸の輪郭を作る。
+   */
+  function roundedOutline(width, color, corner) {
+    var radius = pixelValue(width) / 2;
+    if (!radius) return "";
+
+    // corner を大きくするほど円周上のサンプル数を増やし、より滑らかにする。
+    var samples = Math.min(72, Math.max(16, Math.ceil(16 + pixelValue(corner) * 8)));
+    var shadows = [];
+    for (var i = 0; i < samples; i++) {
+      var angle = (Math.PI * 2 * i) / samples;
+      var x = Math.cos(angle) * radius;
+      var y = Math.sin(angle) * radius;
+      shadows.push(x.toFixed(2) + "px " + y.toFixed(2) + "px 0 " + color);
+    }
+    return shadows.join(", ");
+  }
 
   /**
    * ストロークを .clone に適用
    * ※ 負の z-index は使わない（親背景の背面に落ちないようにする）
    */
-  function applyStroke($clone, sw, sc) {
-    $clone.css({
+  function applyStroke($clone, sw, sc, corner) {
+    var rounded = pixelValue(corner) > 0;
+    var styles = {
       position: "absolute",
       top: 0,
       left: 0,
@@ -46,10 +73,12 @@
       zIndex: 0, // ← 背面（同スタック内）だが負ではない
       pointerEvents: "none",
       color: "transparent", // 塗りは消して輪郭のみ
-      "-webkit-text-stroke": sw + " " + sc,
-      "text-stroke": sw + " " + sc, // 互換目的（現状は非標準）
       whiteSpace: "pre-wrap",
-    });
+      "-webkit-text-stroke": rounded ? "0 transparent" : sw + " " + sc,
+      "text-stroke": rounded ? "0 transparent" : sw + " " + sc,
+      textShadow: rounded ? roundedOutline(sw, sc, corner) : "none",
+    };
+    $clone.css(styles);
   }
 
   /**
@@ -156,9 +185,9 @@
   /**
    * 既存クローンへストロークを適用/更新
    */
-  function updateClones($root, sw, sc) {
+  function updateClones($root, sw, sc, corner) {
     $root.find(".outline-text > .clone").each(function () {
-      applyStroke($(this), sw, sc);
+      applyStroke($(this), sw, sc, corner);
     });
   }
 
@@ -169,6 +198,7 @@
     var opts = $.extend({}, defaults, options || {});
     var sw = String(opts.width || defaults.width);
     var sc = String(opts.color || defaults.color);
+    var corner = String(opts.corner || defaults.corner);
 
     return this.each(function () {
       var $target = $(this);
@@ -177,7 +207,7 @@
       initialWrap($target);
 
       // ストローク適用/更新
-      updateClones($target, sw, sc);
+      updateClones($target, sw, sc, corner);
     });
   };
 })(jQuery);

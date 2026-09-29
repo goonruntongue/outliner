@@ -1,7 +1,7 @@
 {
-  "name": "@goonruntongue/outliner",
-  "version": "1.1.0",
-  "description": "A jQuery plugin that adds text outlines without filling the glyph interior.",
+  "name": "@goonruntongue/outliner2",
+  "version": "1.0.0",
+  "description": "A jQuery text outline plugin with an optional rounded-corner renderer.",
   "main": "dist/outliner.js",
   "browser": "dist/outliner.js",
   "files": [
@@ -20,12 +20,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/goonruntongue/outliner.git"
+    "url": "git+https://github.com/goonruntongue/outliner2.git"
   },
   "bugs": {
-    "url": "https://github.com/goonruntongue/outliner/issues"
+    "url": "https://github.com/goonruntongue/outliner2/issues"
   },
-  "homepage": "https://github.com/goonruntongue/outliner#readme",
+  "homepage": "https://github.com/goonruntongue/outliner2#readme",
   "peerDependencies": {
     "jquery": ">=3.0.0"
   }
