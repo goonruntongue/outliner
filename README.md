@@ -61,3 +61,7 @@ $("div").outliner({
 $(".outline-parent").outliner();
 </script>
 ```
+
+## ライセンス
+
+MIT License。著作権者は Katsuyori Murakami です。詳しくは [LICENSE](./LICENSE) をご覧ください。
