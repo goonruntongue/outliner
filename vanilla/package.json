@@ -1,0 +1,34 @@
+{
+  "name": "@goonruntongue/outliner-vanilla",
+  "version": "1.0.0",
+  "description": "A dependency-free JavaScript library for text outlines that preserve the fill color.",
+  "main": "dist/outliner-vanilla.js",
+  "browser": "dist/outliner-vanilla.js",
+  "jsdelivr": "dist/outliner-vanilla.min.js",
+  "unpkg": "dist/outliner-vanilla.min.js",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "text-outline",
+    "text-stroke",
+    "outline",
+    "vanilla-javascript",
+    "dependency-free"
+  ],
+  "author": "Katsuyori Murakami",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goonruntongue/outliner.git"
+  },
+  "bugs": {
+    "url": "https://github.com/goonruntongue/outliner/issues"
+  },
+  "homepage": "https://goonruntongue.github.io/outliner/"
+}
