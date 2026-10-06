@@ -1,14 +1,24 @@
 {
-  "name": "@goonruntongue/outliner2",
+  "name": "@goonruntongue/outliner",
   "version": "1.0.0",
   "description": "A jQuery text outline plugin with an optional rounded-corner renderer.",
   "main": "dist/outliner.js",
   "browser": "dist/outliner.js",
+  "jsdelivr": "dist/outliner.min.js",
+  "unpkg": "dist/outliner.min.js",
+  "exports": {
+    ".": "./dist/outliner.js",
+    "./dist/outliner.js": "./dist/outliner.js",
+    "./dist/outliner.min.js": "./dist/outliner.min.js"
+  },
   "files": [
     "dist",
     "README.md",
     "LICENSE"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "jquery",
     "plugin",
@@ -20,12 +30,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/goonruntongue/outliner2.git"
+    "url": "git+https://github.com/goonruntongue/outliner.git"
   },
   "bugs": {
-    "url": "https://github.com/goonruntongue/outliner2/issues"
+    "url": "https://github.com/goonruntongue/outliner/issues"
   },
-  "homepage": "https://github.com/goonruntongue/outliner2#readme",
+  "homepage": "https://github.com/goonruntongue/outliner#readme",
   "peerDependencies": {
     "jquery": ">=3.0.0"
   }
