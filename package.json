@@ -35,7 +35,7 @@
   "bugs": {
     "url": "https://github.com/goonruntongue/outliner/issues"
   },
-  "homepage": "https://github.com/goonruntongue/outliner#readme",
+  "homepage": "https://goonruntongue.github.io/outliner/",
   "peerDependencies": {
     "jquery": ">=3.0.0"
   }
