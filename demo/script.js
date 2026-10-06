@@ -16,6 +16,13 @@ $(function () {
       color: color,
       corner: corner,
     });
+    $("#usage-code code").text(
+      '$(".headline").outliner({\n' +
+      '  width: "' + width + 'px",\n' +
+      '  color: "' + color + '",\n' +
+      '  corner: "' + corner + '"\n' +
+      "});"
+    );
   }
 
   $("#width-control, #color-control, #rounded-control, #corner-smoothness-control").on("input change", renderDemo);
