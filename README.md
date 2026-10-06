@@ -4,9 +4,13 @@ A lightweight jQuery plugin for adding an outline to text without covering its f
 
 文字の塗りをつぶさずにアウトラインを付けられる、軽量なjQueryプラグインです。通常はブラウザ標準の `text-stroke` を使い、より丸い角が必要な場合は `text-shadow` を重ねた描画方式を選べます。
 
-[![Live demo / ライブデモ — jQuery Outliner](https://raw.githubusercontent.com/goonruntongue/outliner/main/assets/outliner-eyecatch.png)](https://goonruntongue.github.io/outliner/)
-
-**Click the image to open the live demo / 画像をクリックしてライブデモを開く**
+<p align="center">
+  <a href="https://goonruntongue.github.io/outliner/">
+    <img src="https://raw.githubusercontent.com/goonruntongue/outliner/main/assets/outliner-eyecatch.png" alt="Live demo / ライブデモ — jQuery Outliner" width="836">
+  </a>
+  <br>
+  <a href="https://goonruntongue.github.io/outliner/">Open Live Demo / デモサイトへ</a>
+</p>
 
 ## Installation / インストール
 
