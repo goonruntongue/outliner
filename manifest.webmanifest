@@ -1,0 +1,25 @@
+{
+  "name": "jQuery Outliner Live Demo",
+  "short_name": "Outliner",
+  "description": "A live playground for the jQuery Outliner plugin.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#101522",
+  "theme_color": "#101522",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "assets/pwa-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/pwa-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
