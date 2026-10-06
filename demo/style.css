@@ -20,19 +20,19 @@ footer { padding: 30px 0 44px; color: #68728d; font-size: .8rem; }
 .footer-copy { text-align: center; }
 .footer-copy img { vertical-align: middle; height: 2lh; margin: 0 .5em; }
 
-/* Soft skeuomorphism: restrained lift, beveled edges, and shallow shadows. */
+/* Soft skeuomorphism: a clear beveled edge with restrained drop shadows. */
 .button, .copy-button, .code-card, .playground, .controls, .controls input[type="color"] {
-  border-color: #3b496b;
-  box-shadow: inset 1px 1px 0 rgba(255, 255, 255, .09), inset -1px -1px 0 rgba(0, 0, 0, .32), 0 5px 14px rgba(1, 5, 16, .16);
+  border-color: #4f638e;
+  box-shadow: inset 2px 2px 0 rgba(255, 255, 255, .16), inset -2px -2px 0 rgba(0, 0, 0, .42), 0 6px 14px rgba(1, 5, 16, .14);
 }
 .button {
-  background: linear-gradient(145deg, #222b42, #171d2e);
+  background: linear-gradient(145deg, #303c59 0%, #222b42 48%, #151b2b 100%);
   color: var(--ink);
   text-shadow: 0 1px 0 rgba(0, 0, 0, .38);
   transition: transform .18s ease, border-color .18s ease, background .18s ease;
 }
 .button.primary {
-  background: linear-gradient(145deg, #e8edff, #c7d4f7);
+  background: linear-gradient(145deg, #ffffff 0%, #e8edff 45%, #bac9ee 100%);
   color: #151c30;
   border-color: #f5f7ff;
   text-shadow: 0 1px 0 rgba(255, 255, 255, .65);
@@ -46,24 +46,24 @@ footer { padding: 30px 0 44px; color: #68728d; font-size: .8rem; }
   box-shadow: inset 2px 2px 4px rgba(0, 0, 0, .28), inset -1px -1px 0 rgba(255, 255, 255, .05);
 }
 .playground {
-  border-color: #3b496b;
-  box-shadow: inset 1px 1px 0 rgba(255, 255, 255, .08), inset -1px -1px 0 rgba(0, 0, 0, .28), 0 9px 24px rgba(1, 5, 16, .18);
+  border-color: #536895;
+  box-shadow: inset 2px 2px 0 rgba(255, 255, 255, .15), inset -2px -2px 0 rgba(0, 0, 0, .42), 0 10px 22px rgba(1, 5, 16, .16);
 }
 .controls {
-  background: linear-gradient(145deg, #1a2134, #121725);
-  box-shadow: inset 1px 1px 0 rgba(255, 255, 255, .06), inset -1px -1px 0 rgba(0, 0, 0, .22);
+  background: linear-gradient(145deg, #202a40 0%, #161d2d 55%, #101522 100%);
+  box-shadow: inset 2px 2px 0 rgba(255, 255, 255, .11), inset -2px -2px 0 rgba(0, 0, 0, .36);
 }
 .controls input[type="range"] { accent-color: #9db9ff; }
 .controls input[type="color"] { background: #151b2a; }
 .code-card {
-  background: linear-gradient(145deg, #161d2d, #0e1320);
-  border-color: #3b496b;
+  background: linear-gradient(145deg, #202a40, #121827 65%, #0d1220);
+  border-color: #4f638e;
 }
 .copy-button {
-  background: linear-gradient(145deg, #29334c, #1a2133);
-  border-color: #46577e;
+  background: linear-gradient(145deg, #3a496b, #26314b 55%, #182033);
+  border-color: #667eaf;
   color: #d5e1ff;
   text-shadow: 0 1px 0 rgba(0, 0, 0, .42);
-  box-shadow: inset 1px 1px 0 rgba(255, 255, 255, .10), inset -1px -1px 0 rgba(0, 0, 0, .30), 0 3px 8px rgba(1, 5, 16, .15);
+  box-shadow: inset 2px 2px 0 rgba(255, 255, 255, .15), inset -2px -2px 0 rgba(0, 0, 0, .38), 0 3px 8px rgba(1, 5, 16, .12);
 }
 @media (max-width: 720px) { .site-nav { height: 70px; }.nav-links { gap: 14px; }.nav-links a { font-size: .78rem; }.hero { padding: 72px 0 85px; }.playground { grid-template-columns: 1fr; }.stage { min-height: 330px; }.controls { gap: 20px; }.demo-section, .install-section { padding: 64px 0; } }
