@@ -19,4 +19,51 @@ h1, h2, p { margin-top: 0; }.hero-title { margin-bottom: 29px; font-size: clamp(
 footer { padding: 30px 0 44px; color: #68728d; font-size: .8rem; }
 .footer-copy { text-align: center; }
 .footer-copy img { vertical-align: middle; height: 2lh; margin: 0 .5em; }
+
+/* Soft skeuomorphism: restrained lift, beveled edges, and shallow shadows. */
+.button, .copy-button, .code-card, .playground, .controls, .controls input[type="color"] {
+  border-color: #3b496b;
+  box-shadow: inset 1px 1px 0 rgba(255, 255, 255, .09), inset -1px -1px 0 rgba(0, 0, 0, .32), 0 5px 14px rgba(1, 5, 16, .16);
+}
+.button {
+  background: linear-gradient(145deg, #222b42, #171d2e);
+  color: var(--ink);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, .38);
+  transition: transform .18s ease, border-color .18s ease, background .18s ease;
+}
+.button.primary {
+  background: linear-gradient(145deg, #e8edff, #c7d4f7);
+  color: #151c30;
+  border-color: #f5f7ff;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .65);
+}
+.button:hover, .copy-button:hover {
+  transform: translateY(-1px);
+  border-color: #84a8ff;
+}
+.button:active, .copy-button:active {
+  transform: translateY(0);
+  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, .28), inset -1px -1px 0 rgba(255, 255, 255, .05);
+}
+.playground {
+  border-color: #3b496b;
+  box-shadow: inset 1px 1px 0 rgba(255, 255, 255, .08), inset -1px -1px 0 rgba(0, 0, 0, .28), 0 9px 24px rgba(1, 5, 16, .18);
+}
+.controls {
+  background: linear-gradient(145deg, #1a2134, #121725);
+  box-shadow: inset 1px 1px 0 rgba(255, 255, 255, .06), inset -1px -1px 0 rgba(0, 0, 0, .22);
+}
+.controls input[type="range"] { accent-color: #9db9ff; }
+.controls input[type="color"] { background: #151b2a; }
+.code-card {
+  background: linear-gradient(145deg, #161d2d, #0e1320);
+  border-color: #3b496b;
+}
+.copy-button {
+  background: linear-gradient(145deg, #29334c, #1a2133);
+  border-color: #46577e;
+  color: #d5e1ff;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, .42);
+  box-shadow: inset 1px 1px 0 rgba(255, 255, 255, .10), inset -1px -1px 0 rgba(0, 0, 0, .30), 0 3px 8px rgba(1, 5, 16, .15);
+}
 @media (max-width: 720px) { .site-nav { height: 70px; }.nav-links { gap: 14px; }.nav-links a { font-size: .78rem; }.hero { padding: 72px 0 85px; }.playground { grid-template-columns: 1fr; }.stage { min-height: 330px; }.controls { gap: 20px; }.demo-section, .install-section { padding: 64px 0; } }
