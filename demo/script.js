@@ -4,9 +4,13 @@ $(function () {
   function renderDemo() {
     var width = $("#width-control").val() || 5;
     var color = $("#color-control").val() || "#f5f7ff";
-    var corner = $("#rounded-control").is(":checked") ? "3px" : "0px";
+    var rounded = $("#rounded-control").is(":checked");
+    var smoothness = $("#corner-smoothness-control").val() || 3;
+    var corner = rounded ? smoothness + "px" : "0px";
 
     $("#width-value").text(width + "px");
+    $("#corner-control").prop("hidden", !rounded);
+    $("#corner-smoothness-value").text(smoothness + "px");
     $("#demo-text").outliner({
       width: width + "px",
       color: color,
@@ -14,7 +18,7 @@ $(function () {
     });
   }
 
-  $("#width-control, #color-control, #rounded-control").on("input change", renderDemo);
+  $("#width-control, #color-control, #rounded-control, #corner-smoothness-control").on("input change", renderDemo);
   renderDemo();
 
   $(".copy-button").on("click", function () {
