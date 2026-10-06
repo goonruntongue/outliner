@@ -4,6 +4,8 @@ A lightweight jQuery plugin for adding an outline to text without covering its f
 
 文字の塗りをつぶさずにアウトラインを付けられる、軽量なjQueryプラグインです。通常はブラウザ標準の `text-stroke` を使い、より丸い角が必要な場合は `text-shadow` を重ねた描画方式を選べます。
 
+**[Live demo / ライブデモ](https://goonruntongue.github.io/outliner/)**
+
 ## Installation / インストール
 
 Install jQuery and the plugin with npm.
