@@ -59,9 +59,10 @@ Outlinerは選択要素内のテキストノードを処理するため、入れ
 
 ```html
 <p class="outline-parent">
-  <a>Outlined text / アウトラインを付ける文字</a>
+  <span>Outlined text / アウトラインを付ける文字</span>
 </p>
 
+<script src="jquery.js"></script>
 <script src="outliner.js"></script>
 <script>
   $(".outline-parent").outliner();

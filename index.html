@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="jQuery Outliner is a lightweight plugin for adding text outlines without hiding the fill color.">
+    <title>jQuery Outliner — text outlines without covering the fill</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="demo/style.css">
+    <link rel="icon" href="demo/icon.png">
+  </head>
+  <body>
+    <main>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a class="brand" href="#top">OUTLINER<span>.</span></a>
+        <div class="nav-links">
+          <a href="#demo">Demo</a>
+          <a href="#install">Install</a>
+          <a href="https://github.com/goonruntongue/outliner" target="_blank" rel="noreferrer">GitHub ↗</a>
+        </div>
+      </nav>
+
+      <section class="hero" id="top">
+        <p class="eyebrow">jQuery plugin · MIT License</p>
+        <h1 class="outliner hero-title">Make text<br><em>stand out.</em></h1>
+        <p class="hero-copy">A small jQuery plugin for clear text outlines that keep the original fill color visible. Use native <code>text-stroke</code> or smooth, rounded <code>text-shadow</code> rendering.</p>
+        <p class="hero-copy japanese">文字の塗りをつぶさずにアウトラインを付ける軽量なjQueryプラグインです。標準の描画と、角を丸く見せる描画を選べます。</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#install">Get started</a>
+          <a class="button secondary" href="https://github.com/goonruntongue/outliner" target="_blank" rel="noreferrer">View source</a>
+        </div>
+      </section>
+
+      <section class="demo-section" id="demo" aria-labelledby="demo-heading">
+        <div class="section-heading">
+          <p class="eyebrow">Live demo / ライブデモ</p>
+          <h2 id="demo-heading">Change the outline.</h2>
+        </div>
+        <div class="playground">
+          <div class="stage" id="outline-stage">
+            <p class="stage-label">jQuery Outliner</p>
+            <p class="outliner demo-text" id="demo-text">Hello,<br>outline.</p>
+          </div>
+          <div class="controls" aria-label="Outline settings">
+            <label>Outline width
+              <input type="range" id="width-control" min="1" max="16" value="5">
+              <output id="width-value">5px</output>
+            </label>
+            <label>Outline color
+              <input type="color" id="color-control" value="#f5f7ff">
+            </label>
+            <label class="toggle-row">
+              <input type="checkbox" id="rounded-control">
+              <span>Rounded corners <small>/ 角丸描画</small></span>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <section class="install-section" id="install" aria-labelledby="install-heading">
+        <div class="section-heading">
+          <p class="eyebrow">Install / インストール</p>
+          <h2 id="install-heading">Use it from a CDN.</h2>
+          <p>Load jQuery first, then Outliner. jQueryを先に読み込んでから、Outlinerを読み込みます。</p>
+        </div>
+        <div class="code-card">
+          <button class="copy-button" type="button" data-copy-target="cdn-code">Copy</button>
+          <pre id="cdn-code"><code>&lt;script src="https://code.jquery.com/jquery-3.7.1.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/@goonruntongue/outliner@1/dist/outliner.min.js"&gt;&lt;/script&gt;</code></pre>
+        </div>
+        <div class="code-card small-code">
+          <button class="copy-button" type="button" data-copy-target="usage-code">Copy</button>
+          <pre id="usage-code"><code>$(".headline").outliner({
+  width: "5px",
+  color: "#ffffff",
+  corner: "0px"
+});</code></pre>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <span>Built with jQuery Outliner</span>
+      <a href="https://www.npmjs.com/package/@goonruntongue/outliner" target="_blank" rel="noreferrer">npm ↗</a>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@goonruntongue/outliner@1/dist/outliner.min.js"></script>
+    <script src="demo/script.js"></script>
+  </body>
+</html>
