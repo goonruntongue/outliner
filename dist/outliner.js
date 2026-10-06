@@ -1,9 +1,9 @@
 /*!
- * jQuery outliner2 Plugin v1.0.0
+ * jQuery Outliner Plugin v1.0.0
  * Make outlined text by cloning only text nodes, with optional rounded corners.
  *
  * MIT License
- * Copyright (c) 2025 YOUR_NAME
+ * Copyright (c) 2025 Katsuyori Murakami
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
