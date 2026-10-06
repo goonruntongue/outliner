@@ -38,6 +38,27 @@ For a fully pinned version, use:
 
 UNPKG: `https://unpkg.com/@goonruntongue/outliner@1/dist/outliner.min.js`
 
+### Vanilla JavaScript edition / 依存なしJavaScript版
+
+For projects that do not use jQuery, install the dependency-free edition.
+
+jQueryを使用しないプロジェクトでは、依存なし版を利用できます。
+
+```bash
+npm install @goonruntongue/outliner-vanilla
+```
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/@goonruntongue/outliner-vanilla@1/dist/outliner-vanilla.min.js"></script>
+<script>
+  Outliner.apply(".headline", {
+    width: "5px",
+    color: "#ffffff",
+    corner: "3px"
+  });
+</script>
+```
+
 ## Usage / 使い方
 
 Call `.outliner()` on the elements whose text should have an outline.

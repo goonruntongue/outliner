@@ -74,6 +74,7 @@
           <h2 id="install-heading">Use it from a CDN.</h2>
           <p>Load jQuery first, then Outliner. jQueryを先に読み込んでから、Outlinerを読み込みます。</p>
         </div>
+        <h3 class="edition-heading">jQuery edition / jQuery版</h3>
         <div class="code-card">
           <button class="copy-button" type="button" data-copy-target="cdn-code">Copy</button>
           <pre id="cdn-code"><code>&lt;script src="https://code.jquery.com/jquery-3.7.1.min.js"&gt;&lt;/script&gt;
@@ -87,6 +88,25 @@
   corner: "0px"
 });</code></pre>
         </div>
+        <div class="vanilla-preview" aria-labelledby="vanilla-heading">
+          <div>
+            <p class="eyebrow">Vanilla JavaScript / 依存なし版</p>
+            <h3 id="vanilla-heading">No jQuery. Same outline.</h3>
+            <p>Use the dependency-free edition when you want to keep your project light. jQueryを読み込まず、通常のJavaScriptだけで同じアウトラインを適用できます。</p>
+          </div>
+          <p class="vanilla-demo-text" id="vanilla-demo-text">Vanilla,<br>outlined.</p>
+        </div>
+        <div class="code-card">
+          <button class="copy-button" type="button" data-copy-target="vanilla-cdn-code">Copy</button>
+          <pre id="vanilla-cdn-code"><code>&lt;script src="https://cdn.jsdelivr.net/npm/@goonruntongue/outliner-vanilla@1/dist/outliner-vanilla.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  Outliner.apply(".headline", {
+    width: "5px",
+    color: "#f5f7ff",
+    corner: "3px"
+  });
+&lt;/script&gt;</code></pre>
+        </div>
       </section>
     </main>
     <footer>
@@ -97,6 +117,7 @@
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@goonruntongue/outliner@1/dist/outliner.min.js"></script>
+    <script src="dist/outliner-vanilla.js?v=1.0.0"></script>
     <script src="demo/script.js?v=1.0.1"></script>
     <script>
       if ('serviceWorker' in navigator) {
