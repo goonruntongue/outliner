@@ -1,6 +1,6 @@
 {
   "name": "@goonruntongue/outliner-vanilla",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A dependency-free JavaScript library for text outlines that preserve the fill color.",
   "main": "dist/outliner-vanilla.js",
   "browser": "dist/outliner-vanilla.js",
