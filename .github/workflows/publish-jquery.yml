@@ -19,7 +19,9 @@ jobs:
           registry-url: https://registry.npmjs.org
           package-manager-cache: false
       - name: Ensure the tag matches package.json
-        run: test "jquery-v$(node -p \"require('./package.json').version\")" = "$GITHUB_REF_NAME"
+        run: |
+          expected="jquery-v$(node -p "require('./package.json').version")"
+          test "$expected" = "$GITHUB_REF_NAME"
       - name: Verify the package contents
         run: npm pack --dry-run
       - name: Publish to npm
